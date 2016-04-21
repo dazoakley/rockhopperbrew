@@ -1,0 +1,19 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Rockhopper Brewing Co.
+email: info@rockhopperbrew.co
+description: > # this means to ignore newlines until "baseurl:"
+  Rockhopper Brewing Company is a Bedfordshire (UK) based brewery founded in
+  2015.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://rockhopperbrew" # the base hostname & protocol for your site
+twitter_username: hopperbrew
+
+# Build settings
+markdown: kramdown

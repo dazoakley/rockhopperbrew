@@ -1,0 +1,55 @@
+#logo {
+  text-align: center;
+
+  img {
+    margin: 0 auto;
+    max-height: 100px;
+    max-width: 100%;
+  }
+}
+
+#md-navigation {
+  display: none;
+}
+
+/*
+  DEVICE SPECIFIC OVERRIDES
+*/
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #sm-navigation {
+    display: none;
+  }
+
+  #md-navigation {
+    display: block;
+    padding-top: 25px;
+
+    ul.nav.nav-pills {
+      text-align: right;
+    }
+
+    .nav-pills>li {
+      float: none;
+      display: inline-block;
+    }
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #md-navigation {
+    padding-top: 35px;
+  }
+
+  #logo img {
+    max-height: 130px;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
