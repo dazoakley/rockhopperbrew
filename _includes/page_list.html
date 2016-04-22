@@ -1,0 +1,11 @@
+{% for my_page in site.weighted_pages %}
+  {% if my_page.title %}
+    {% if group == null or group == my_page.group %}
+      {% if page.url == my_page.url %}
+        <li class="active"><a href="{{ my_page.url | prepend: site.baseurl }}" class="active">{{ my_page.title }}</a></li>
+      {% else %}
+        <li class=""><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
+      {% endif %}
+    {% endif %}
+  {% endif %}
+{% endfor %}

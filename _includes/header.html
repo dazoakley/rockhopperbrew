@@ -11,15 +11,7 @@
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li><a href="{{ site.baseurl }}/">Home</a></li>
-          {% for my_page in site.pages %}
-            {% if my_page.title %}
-            <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }} 1</a></li>
-            <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }} 2</a></li>
-            <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }} 3</a></li>
-            <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }} 4</a></li>
-            {% endif %}
-          {% endfor %}
+          {% include page_list.html %}
         </ul>
       </div>
     </div>
@@ -34,14 +26,7 @@
 
     <div id="md-navigation" class="col-xs-12 col-sm-8 col-md-8">
       <ul class="nav nav-pills">
-        {% for my_page in site.pages %}
-          {% if my_page.title %}
-          <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }} 1</a></li>
-          <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }} 2</a></li>
-          <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }} 3</a></li>
-          <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }} 4</a></li>
-          {% endif %}
-        {% endfor %}
+        {% include page_list.html %}
       </ul>
     </div>
   </div>

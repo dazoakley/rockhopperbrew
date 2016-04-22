@@ -12,6 +12,34 @@
   display: none;
 }
 
+.nav>li>a {
+  color: $black-color;
+}
+
+.nav-pills>li.active>a {
+  color: $white-text-on-black-color;
+  background-color: $black-color;
+}
+
+.navbar-default {
+  background-color: $black-color;
+  border-color: $black-color;
+
+  .navbar-nav>li>a {
+    color: $white-text-on-black-color;
+    text-align: center;
+  }
+
+  .navbar-toggle, .navbar-toggle:hover, .navbar-toggle:focus, .navbar-collapse {
+    background-color: $black-color;
+    border-color: $black-color;
+
+    .icon-bar {
+      background-color: $white-text-on-black-color;
+    }
+  }
+}
+
 /*
   DEVICE SPECIFIC OVERRIDES
 */

@@ -3,23 +3,23 @@
 ---
 @charset "utf-8";
 
-// variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+$text-color:                #111;
+$black-color:               #3e3e3e;
+$grey-color:                #e0e0e0;
+$white-text-on-black-color: #fff;
 
-$spacing-unit:     30px;
+body {
+  color: $text-color;
+}
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  body {
+    border-top: 5px solid $black-color;
+    padding-top: 10px;
+  }
+}
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import "base";
 @import "logo_and_nav";
+@import "footer";
