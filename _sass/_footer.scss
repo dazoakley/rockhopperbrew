@@ -6,16 +6,16 @@ footer {
   background-color: $black-color;
   text-align: center;
 
-  #social-links i:hover {
-    color: $grey-color;
-  }
-
   .footer-elm {
     padding-top: 25px;
   }
 
-  a, a:hover {
+  a {
     color: $white-text-on-black-color;
+  }
+
+  a:hover {
+    color: $yellow-color;
   }
 
   @media (min-width: 768px) {

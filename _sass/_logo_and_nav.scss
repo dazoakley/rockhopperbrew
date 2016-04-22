@@ -10,24 +10,40 @@
 
 #md-navigation {
   display: none;
+
+  .nav>li>a {
+    color: $black-color;
+  }
+
+  .nav>li>a:hover, .nav>li>a:focus,
+  .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+    color: $black-color;
+    background-color: $yellow-color;
+  }
+
+  .nav-pills>li.active>a {
+    color: $white-text-on-black-color;
+    background-color: $black-color;
+  }
 }
 
-.nav>li>a {
-  color: $black-color;
-}
-
-.nav-pills>li.active>a {
-  color: $white-text-on-black-color;
-  background-color: $black-color;
-}
-
-.navbar-default {
+#sm-navigation.navbar-default {
   background-color: $black-color;
   border-color: $black-color;
 
   .navbar-nav>li>a {
     color: $white-text-on-black-color;
     text-align: center;
+  }
+
+  .navbar-nav>.active>a {
+    color: $black-color;
+  }
+
+  .navbar-nav>li>a:hover, .navbar-nav>li>a:focus,
+  .navbar-nav>.active>a:hover, .navbar-nav>.active>a:focus {
+    color: $black-color;
+    background-color: $yellow-color;
   }
 
   .navbar-toggle, .navbar-toggle:hover, .navbar-toggle:focus, .navbar-collapse {
