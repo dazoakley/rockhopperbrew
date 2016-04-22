@@ -10,6 +10,11 @@ $white-text-on-black-color: #fff;
 
 body {
   color: $text-color;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Signika, 'Helvetica Neue', Helvetica, Arial;
 }
 
 /* Small devices (tablets, 768px and up) */
