@@ -1,11 +1,13 @@
-{% for my_page in site.weighted_pages %}
+{% assign pages = site.pages | sort:"weight"  %}
+
+{% for my_page in pages %}
   {% if my_page.title %}
-    {% if group == null or group == my_page.group %}
-      {% if page.url == my_page.url %}
-        <li class="active"><a href="{{ my_page.url | prepend: site.baseurl }}" class="active">{{ my_page.title }}</a></li>
-      {% else %}
-        <li class=""><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
-      {% endif %}
+    {% if page.url == my_page.url %}
+      <li class="active"><a href="{{ my_page.url | prepend: site.baseurl }}" class="active">{{ my_page.title }}</a></li>
+    {% elsif my_page.title == "News" and page.url contains '/news/' %}
+      <li class="active"><a href="{{ my_page.url | prepend: site.baseurl }}" class="active">{{ my_page.title }}</a></li>
+    {% else %}
+      <li class=""><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
     {% endif %}
   {% endif %}
 {% endfor %}
