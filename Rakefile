@@ -13,6 +13,8 @@ task :new_post do
 layout: post
 title: "New News"
 date: #{Time.now.strftime('%Y-%m-%d %H:%M:%S %z')}
+author: Daz
+excerpt_separator: <!--more-->
 ---
 
 Put your news here...

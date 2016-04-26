@@ -9,12 +9,13 @@ description: > # this means to ignore newlines until "baseurl:"
 email: info@rockhopperbrew.co
 phone: "07879 810 558"
 
-twitter_username: hopperbrew
-facebook_username: hopperbrew
+twitter: https://twitter.com/hopperbrew
+facebook: https://www.facebook.com/hopperbrew
+googleplus: https://www.google.com/+Rockhopperbrew
 
 # Build settings
 encoding: utf-8
-permalink: /news/:year/:month/:title
+permalink: /news/:year/:month/:title/
 markdown: kramdown
 
 kramdown:
