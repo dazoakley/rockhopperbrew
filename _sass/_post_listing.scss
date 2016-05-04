@@ -1,0 +1,26 @@
+.post-listing {
+  min-height: 250px;
+
+  .post-title {
+    margin-bottom: 0;
+
+    a, a:visited {
+      color: $black-color;
+    }
+  }
+
+  .post-meta {
+    font-size: smaller;
+    color: $dark-grey-color;
+    line-height: normal;
+  }
+
+  .post-excerpt {
+    margin-top: 10px;
+  }
+}
+
+.rss-link {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

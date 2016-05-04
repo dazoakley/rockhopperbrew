@@ -7,6 +7,7 @@ $text-color:                #111;
 $black-color:               #3e3e3e;
 $yellow-color:              #fbd007;
 $grey-color:                #e0e0e0;
+$dark-grey-color:           #777;
 $white-text-on-black-color: #fff;
 
 body {
@@ -16,6 +17,21 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Signika, 'Helvetica Neue', Helvetica, Arial;
+}
+
+#site-header {
+  padding-bottom: 40px;
+}
+
+.content {
+  min-height: 250px;
+}
+
+.coming-soon {
+  min-height: 250px;
+  padding-top: 100px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 /* Small devices (tablets, 768px and up) */
@@ -29,3 +45,4 @@ h1, h2, h3, h4, h5, h6 {
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import "logo_and_nav";
 @import "footer";
+@import "post_listing";
