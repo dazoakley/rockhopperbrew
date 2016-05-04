@@ -19,5 +19,8 @@ permalink: /news/:year/:month/:title/
 markdown: kramdown
 exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile']
 
+gems:
+  - jekyll-sitemap
+
 kramdown:
   input: GFM
