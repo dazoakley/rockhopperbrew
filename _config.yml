@@ -17,6 +17,7 @@ googleplus: https://www.google.com/+Rockhopperbrew
 encoding: utf-8
 permalink: /news/:year/:month/:title/
 markdown: kramdown
+exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile']
 
 kramdown:
   input: GFM

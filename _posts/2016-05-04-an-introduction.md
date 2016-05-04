@@ -29,10 +29,10 @@ of "Can I, can't I?" we went for it.
 Where we are now is that we have a 2BBL (~330 litres) brewhouse, 2 fermenters,
 some casks, some bottles and a bunch of ideas (we're planning on kegs too in
 the future, but the area we're in isn't quite ready for them just yet).  We're
-almost ready to go - first trial batches should be happening in May, with the
-plan to start selling very soon after to local pubs, bottle shops, restaurants
-and anyone else who is interested in getting good beer out in Luton, the home
-counties and the surrounding area.
+almost ready to go - first trial batches should be happening later this month,
+with the plan to start selling very soon after to local pubs, bottle shops,
+restaurants and anyone else who is interested in getting good beer out in
+Luton, the home counties and the surrounding area.
 
 I'll follow up this post soon with more details and photos of the build and
 what it takes to setup a brewery from the business side, and hopefully news of

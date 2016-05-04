@@ -23,3 +23,14 @@ TXT
     file.write(content)
   end
 end
+
+desc 'Build the site (into _site/)'
+task :build do
+  system('rm -rf _site/*')
+  system('bundle exec jekyll build')
+end
+
+desc 'Deploy the site'
+task :deploy => :build do
+  system("rsync -e ssh -avr --delete-after --delete-excluded _site/ admin@rockhopperbrew.co:/srv/rockhopperbrew.co/public/htdocs/")
+end
