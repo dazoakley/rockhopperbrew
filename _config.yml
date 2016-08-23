@@ -21,6 +21,25 @@ exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile']
 
 gems:
   - jekyll-sitemap
+  - jekyll-assets
 
 kramdown:
   input: GFM
+
+assets:
+  compress:
+    css: default
+    js: default
+  digest: true
+  cache: default
+  cdn: https://assets.rockhopperbrew.co
+  skip_baseurl_with_cdn: false
+  skip_prefix_with_cdn: false
+  prefix: '/assets'
+  assets:
+    - '*.png'
+    - '*.jpg'
+  sources:
+    - 'assets/img'
+    - 'assets/css'
+    - 'assets/js'
