@@ -13,7 +13,6 @@ task :new_post do
 layout: post
 title: "New News"
 date: #{Time.now.strftime('%Y-%m-%d %H:%M:%S %z')}
-author: Daz
 excerpt_separator: <!--more-->
 ---
 
@@ -32,5 +31,5 @@ end
 
 desc 'Deploy the site'
 task :deploy => :build do
-  system("rsync -e ssh -avr --delete-after --delete-excluded _site/ admin@rockhopperbrew.co:/srv/rockhopperbrew.co/public/htdocs/")
+  system("rsync -e ssh -avr --delete-after --exclude '.well-known' _site/ admin@rockhopperbrew.co:/srv/rockhopperbrew.co/public/htdocs/")
 end

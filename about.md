@@ -2,7 +2,7 @@
 layout: page
 title: About Us
 permalink: /about/
-weight: 4
+weight: 5
 ---
 
 Rockhopper Brewing Co. is a new (early/mid 2016) independent brewery based in
