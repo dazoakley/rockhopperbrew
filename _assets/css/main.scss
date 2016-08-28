@@ -1,7 +1,4 @@
----
-# Only the main Sass file needs front matter (the dashes are enough)
----
-@charset "utf-8";
+@charset 'utf-8';
 
 $text-color:                #333;
 $black-color:               #3e3e3e;
@@ -37,6 +34,10 @@ h1, h2, h3, h4, h5, h6 {
 .beer-variation-label {
   font-family: Signika, 'Helvetica Neue', Helvetica, Arial;
   font-size: 120%;
+}
+
+.beer-pump-label {
+  max-height: 300px;
 }
 
 /* Small devices (tablets, 768px and up) */

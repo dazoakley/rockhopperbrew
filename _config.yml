@@ -31,7 +31,7 @@ assets:
     css: default
     js: default
   digest: true
-  cache: default
+  cache: .assets-cache
   cdn: https://assets.rockhopperbrew.co
   skip_baseurl_with_cdn: false
   skip_prefix_with_cdn: false
@@ -43,3 +43,5 @@ assets:
     - 'assets/img'
     - 'assets/css'
     - 'assets/js'
+  features:
+    automatic_img_size: false
