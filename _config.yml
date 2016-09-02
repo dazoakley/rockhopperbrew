@@ -26,22 +26,22 @@ gems:
 kramdown:
   input: GFM
 
+sass:
+  sass_dir:
+    - _assets/bower/bootstrap-sass/assets/stylesheets
+    - _assets/css
+  style: compressed
+
 assets:
   compress:
     css: default
     js: default
   digest: true
-  cache: .assets-cache
   cdn: https://assets.rockhopperbrew.co
   skip_baseurl_with_cdn: false
   skip_prefix_with_cdn: false
   prefix: '/assets'
-  assets:
-    - '*.png'
-    - '*.jpg'
   sources:
-    - 'assets/img'
-    - 'assets/css'
-    - 'assets/js'
+    - '_assets/bower'
   features:
     automatic_img_size: false
