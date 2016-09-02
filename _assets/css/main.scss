@@ -1,7 +1,7 @@
 @charset 'utf-8';
 
-@import "bootstrap/bootstrap-sprockets";
-@import "bootstrap/bootstrap";
+@import "bootstrap/bootstrap-sprockets"; @import "bootstrap/bootstrap";
+@import "font-awesome/font-awesome-sprockets"; @import "font-awesome/font-awesome";
 
 $text-color:                #333;
 $black-color:               #3e3e3e;
