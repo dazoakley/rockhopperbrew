@@ -41,7 +41,12 @@ assets:
   skip_baseurl_with_cdn: false
   skip_prefix_with_cdn: false
   prefix: '/assets'
+  assets:
+    - '*.woff'
+    - '*.woff2'
+    - '*.ttf'
   sources:
     - '_assets/bower'
+    - '_assets/fonts'
   features:
     automatic_img_size: false

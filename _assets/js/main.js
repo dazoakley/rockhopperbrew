@@ -1,2 +1,2 @@
 //= require jquery.js
-//= require bootstrap-sass/assets/javascripts/bootstrap.js
+//= require bootstrap/bootstrap.js
