@@ -49,4 +49,5 @@ assets:
     - '_assets/bower'
     - '_assets/fonts'
   features:
+    liquid: false
     automatic_img_size: false

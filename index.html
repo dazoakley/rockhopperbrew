@@ -5,15 +5,54 @@ permalink: /
 weight: 1
 ---
 
-<div class="container">
-  <p>&nbsp;</p>
+<div class="jumbotron leader">
+  <div class="leader-inner">
+    <p class="lead">
+      Hello, we're Rockhopper Brewing Co.
+    </p>
+    <p class="lead">
+      We produce seasonal and ever changing beers.
+    </p>
+  </div>
 </div>
 
-<div class="coming-soon container">
-  <p class="lead">
-    Hello, we're Rockhopper Brewing Co.
-  </p>
-  <p>
-    <em>Please bear with us while we set this new site up...</em>
-  </p>
+<hr>
+
+<div class="row">
+  <div class="col-md-offset-1 col-md-10">
+    <h2>About Us</h2>
+    <p>
+      Rockhopper Brewing Co. is a new (early/mid 2016) independent brewery based in
+      Luton, Bedfordshire. It’s the result of a passion for homebrewing, and beer in
+      general that very happily got a bit out of hand.
+    </p>
+    <p>
+      We will be brewing beer that is unpasteurised, unfiltered and packed to the
+      brim with flavour – this is the kind of beer we love, and we hope you do too.
+    </p>
+  </div>
+</div>
+
+<hr>
+
+<div class="row">
+  <div class="col-md-offset-1 col-md-10">
+    <h2>Latest News</h2>
+    <div class="row">
+      {% for post in site.posts %}
+        <div class="post-listing col-sm-6">
+          <article>
+            <header class="post-header">
+              <h4 class="post-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h4>
+              <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            </header>
+
+            <div class="post-excerpt">
+              {{ post.excerpt }}
+            </div>
+          </article>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
 </div>
