@@ -1,4 +1,4 @@
-.post-listing {
+.post-listing, .homepage-post-listing {
   min-height: 250px;
 
   .post-title {
@@ -23,4 +23,9 @@
 .rss-link {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.homepage-post-listing {
+  min-height: 0;
+  margin-bottom: 25px;
 }
