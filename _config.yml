@@ -33,6 +33,7 @@ sass:
   style: compressed
 
 assets:
+  cache: false
   compress:
     css: default
     js: default
