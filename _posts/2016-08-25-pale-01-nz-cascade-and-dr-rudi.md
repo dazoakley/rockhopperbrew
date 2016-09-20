@@ -5,7 +5,7 @@ date: 2016-08-25 08:00:38 +0100
 excerpt: "Our first brew is ready!  The first out of the gate is a modern style pale ale made with New Zealand hops.  It's been a long time coming, but we hope you'll think it's been worth the wait!"
 ---
 
-{% img 'beers/pale-01.png' class:'img-responsive center-block beer-pump-label' alt:'PALE | 01' %}
+{% img 'beers/pale-01.png' class:'img-responsive center-block max-height-300' alt:'PALE | 01' %}
 
 Our first brew is ready!  The first out of the gate is a modern style
 pale ale made with New Zealand hops.  It's been a long time coming, but we
