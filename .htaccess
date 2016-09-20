@@ -5,3 +5,6 @@ RewriteBase /
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 
+# redirect /news to /blog
+RewriteRule ^/news/?$ /blog/ [L,R=301]
+RewriteRule ^/news/index.html$ /blog/ [L,R=301]
