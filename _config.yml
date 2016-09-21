@@ -15,7 +15,7 @@ googleplus: https://www.google.com/+Rockhopperbrew
 
 # Build settings
 encoding: utf-8
-permalink: /news/:year/:month/:title/
+permalink: /blog/:year/:month/:title/
 markdown: kramdown
 exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile']
 
