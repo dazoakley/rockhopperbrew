@@ -31,5 +31,5 @@ end
 
 desc 'Deploy the site'
 task :deploy => :build do
-  system("rsync -e ssh -avr --delete-after --exclude '.well-known' _site/ admin@rockhopperbrew.co:/srv/rockhopperbrew.co/public/htdocs/")
+  system("rsync -e ssh -avr --delete-after --exclude '.well-known' --exclude 'stats' _site/ admin@rockhopperbrew.co:/srv/rockhopperbrew.co/public/htdocs/")
 end
