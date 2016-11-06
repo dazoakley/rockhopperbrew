@@ -17,15 +17,37 @@ weight: 4
 
   <div class="row">
     <div class="col-md-12">
-      <h4>Pubs</h4>
       <ul class="stockists">
-        <li><del><a href="http://www.banksandtaylor.com/">The Brewery Tap, Shefford, SG17 5DH</a></del> - <em>sorry, sold out!</em></li>
-        <li><del><a href="http://www.banksandtaylor.com/globe/globe.htm">The Globe, Dunstable, LU6 1LS</a></del> - <em>sorry, sold out!</em></li>
-        <li><del><a href="http://www.banksandtaylor.com/albion/albion.htm">The Albion, Ampthill, MK45 2JT</a></del> - <em>sorry, sold out!</em></li>
-        <li><del><a href="http://www.thecuckoo.pub/">The Cuckoo, Toddington, LU5 6QJ</a></del> - <em>sorry, sold out!</em></li>
-        <li><del><a href="https://www.facebook.com/The-Black-Horse-1637769673102047/">The Black Horse, Luton, LU1 5BE</a></del> - <em>sorry, sold out!</em></li>
-        <li><del><a href="http://broood.co.uk/">Broood (at the Prince of Wales), Hinckley, LE10 0JT</a></del> - <em>sorry, sold out!</em></li>
+        <!-- <li><del><a href="http://www.thecuckoo.pub/">The Cuckoo, Toddington, LU5 6QJ</a></del> - <em>sorry, sold out!</em></li>
+        <li><del><a href="https://www.facebook.com/The-Black-Horse-1637769673102047/">The Black Horse, Luton, LU1 5BE</a></del> - <em>sorry, sold out!</em></li> -->
+        <li><a href="http://www.baldbuzzard.co.uk/">The Bald Buzzard, Leighton Buzzard, LU7 1HJ</a></li>
+        <li><a href="http://broood.co.uk/">Broood (at the Prince of Wales), Hinckley, LE10 0JT</a></li>
       </ul>
     </div>
   </div>
 </div>
+
+<div id="map"></div>
+
+<script>
+  function addMarker(description, latlng, map, bounds) {
+    var marker = new google.maps.Marker({ position: latlng, map: map, animation: google.maps.Animation.DROP });
+    var info   = new google.maps.InfoWindow({ content: description });
+    marker.addListener('click', function() { info.open(map, marker) });
+    bounds.extend(marker.position);
+  }
+
+  function initMap() {
+    var the_brewery = { lat: 51.897834, lng: -0.397439 };
+    var map         = new google.maps.Map(document.getElementById('map'), { zoom: 8, center: the_brewery });
+    var bounds      = new google.maps.LatLngBounds();
+
+    // addMarker('The Cuckoo<br/>Toddington<br/>LU5 6QJ', { lat: 51.949591, lng: -0.532208 }, map, bounds);
+    // addMarker('The Black Horse<br/>Luton<br/>LU1 5BE', { lat: 51.876715, lng: -0.419045 }, map, bounds);
+    addMarker('The Bald Buzzard<br/>Leighton Buzzard<br/>LU7 1HJ', { lat: 51.916731, lng: -0.660191 }, map, bounds);
+    addMarker('Brood (at The Prince of Wales)<br/>Hinckley<br/>LE10 0JT', { lat: 52.539368, lng: -1.378454 }, map, bounds);
+
+    map.fitBounds(bounds);
+  }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_mGSkrw9vTTAa56W6F1qqt_BfBoh4Y2M&callback=initMap"></script>
