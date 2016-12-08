@@ -18,6 +18,7 @@ weight: 4
   <div class="row">
     <div class="col-md-12">
       <ul class="stockists">
+        <li><a href="http://www.mkbiergarten.co.uk/">MK Biergarten, Milton Keynes, MK12 5FJ</a></li>
         <li><a href="https://www.facebook.com/The-Black-Horse-1637769673102047/">The Black Horse, Luton, LU1 5BE</a></li>
         <li><a href="http://www.thecuckoo.pub/">The Cuckoo, Toddington, LU5 6QJ</a></li>
         <li><a href="http://www.woburnalehouse.com/">Woburn Ale House, Woburn, MK17 9PZ</a></li>
@@ -31,23 +32,40 @@ weight: 4
 <div id="map"></div>
 
 <script>
-  function addMarker(description, latlng, map, bounds) {
-    var marker = new google.maps.Marker({ position: latlng, map: map, animation: google.maps.Animation.DROP });
-    var info   = new google.maps.InfoWindow({ content: description });
-    marker.addListener('click', function() { info.open(map, marker) });
+  function addMarker(description, latlng, map, info, bounds) {
+    var marker = new google.maps.Marker({ position: latlng, map: map, html: description, animation: google.maps.Animation.DROP });
+
     bounds.extend(marker.position);
+    marker.addListener('click', function() {
+      info.setContent(this.html);
+      info.open(map, this);
+    });
   }
 
   function initMap() {
     var the_brewery = { lat: 51.897834, lng: -0.397439 };
-    var map         = new google.maps.Map(document.getElementById('map'), { zoom: 8, center: the_brewery });
     var bounds      = new google.maps.LatLngBounds();
+    var info        = new google.maps.InfoWindow();
 
-    addMarker('The Black Horse<br/>Luton<br/>LU1 5BE', { lat: 51.876715, lng: -0.419045 }, map, bounds);
-    addMarker('The Cuckoo<br/>Toddington<br/>LU5 6QJ', { lat: 51.949591, lng: -0.532208 }, map, bounds);
-    addMarker('The Bald Buzzard<br/>Leighton Buzzard<br/>LU7 1HJ', { lat: 51.916731, lng: -0.660191 }, map, bounds);
-    addMarker('Woburn Ale House<br/>Woburn<br/>MK17 9PZ', { lat: 51.989055, lng: -0.619006 }, map, bounds);
-    addMarker('Brood (at The Prince of Wales)<br/>Hinckley<br/>LE10 0JT', { lat: 52.539368, lng: -1.378454 }, map, bounds);
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom:              8,
+      center:            the_brewery,
+      draggable:         true,
+      zoomControl:       true,
+      scrollwheel:       false,
+      panControl:        true,
+      disableDefaultUI:  false,
+      streetViewControl: true,
+      clickableLabels:   false,
+      mapTypeControl:    false
+    });
+
+    addMarker('MK Biergarten<br/>Milton Keynes<br/>MK12 5FJ', { lat: 52.064523, lng: -0.805745 }, map, info, bounds);
+    addMarker('The Black Horse<br/>Luton<br/>LU1 5BE', { lat: 51.876715, lng: -0.419045 }, map, info, bounds);
+    addMarker('The Cuckoo<br/>Toddington<br/>LU5 6QJ', { lat: 51.949591, lng: -0.532208 }, map, info, bounds);
+    addMarker('The Bald Buzzard<br/>Leighton Buzzard<br/>LU7 1HJ', { lat: 51.916731, lng: -0.660191 }, map, info, bounds);
+    addMarker('Woburn Ale House<br/>Woburn<br/>MK17 9PZ', { lat: 51.989055, lng: -0.619006 }, map, info, bounds);
+    addMarker('Brood (at The Prince of Wales)<br/>Hinckley<br/>LE10 0JT', { lat: 52.539368, lng: -1.378454 }, map, info, bounds);
 
     map.fitBounds(bounds);
   }
